@@ -14,7 +14,7 @@ class PrototypesController < ApplicationController
     if @prototype.save
       redirect_to root_path(@prototype)
     else
-      @prototype = @prototype.includes(:user)
+      @prototype = @prototype
       render :new
     end
   end
